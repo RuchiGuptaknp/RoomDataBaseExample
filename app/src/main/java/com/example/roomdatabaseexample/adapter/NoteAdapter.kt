@@ -9,18 +9,18 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.roomdatabaseexample.R
-import com.example.roomdatabaseexample.activity.MainActivity
+
 import com.example.roomdatabaseexample.room.Note
 import com.example.roomdatabaseexample.utils.toastMessage
 
 class NoteAdapter(
-    val itemClickListener: itemClickListener,
-    val deleteClickListener: deleteClickListener,
-    val context: Context):RecyclerView.Adapter<NoteAdapter.ViewHolder>() {
+ private   val itemClickListener: itemClickListener,
+    private val deleteClickListener: deleteClickListener,
+   private val context: Context):RecyclerView.Adapter<NoteAdapter.ViewHolder>() {
     private val allNotes = ArrayList<Note>()
 
     inner class ViewHolder(item: View) : RecyclerView.ViewHolder(item) {
-        val noteTitle = item.findViewById<TextView>(R.id.idTVNote)
+        val noteTitle = item.findViewById<TextView>(R.id.idTVNote)!!
         val noteDescription = item.findViewById<TextView>(R.id.idTVDescription)
         val noteDate = item.findViewById<TextView>(R.id.idTVDate)
         val noteDelete = item.findViewById<ImageView>(R.id.idIVDelete)

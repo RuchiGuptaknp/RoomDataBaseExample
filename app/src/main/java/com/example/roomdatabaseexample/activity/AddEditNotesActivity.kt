@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import com.example.roomdatabaseexample.R
+
 import com.example.roomdatabaseexample.databinding.ActivityAddEditNotesBinding
 import com.example.roomdatabaseexample.room.Note
 import com.example.roomdatabaseexample.utils.toastMessage
